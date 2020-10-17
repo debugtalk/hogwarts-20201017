@@ -1,5 +1,6 @@
 import time
 import hashlib
+import random
 
 
 from httprunner import __version__
@@ -33,3 +34,7 @@ def get_folders_num(response: ResponseObject):
     resp_json = response.resp_obj.json()
     folders = resp_json["data"]["folders"]
     return len(folders)
+
+
+def gen_random_title():
+    return f"demo-{random.randint(1, 9999999)}"

@@ -15,6 +15,7 @@ class TestCaseMubu(HttpRunner):
                 "host": "mubu.com",
                 "phone": "18613143458",
                 "password": "msFrwx$!kt3RTRq@Q*pV",
+                "title": "${gen_random_title()}"
             }
         )
         .base_url("https://$host")
@@ -773,17 +774,10 @@ class TestCaseMubu(HttpRunner):
                             "documentId": "${docID}",
                             "version": 0,
                             "content": [
-                                {"name": "nameChanged", "title": "d", "original": ""},
-                                {"name": "nameChanged", "title": "de", "original": "d"},
                                 {
                                     "name": "nameChanged",
-                                    "title": "dem",
-                                    "original": "de",
-                                },
-                                {
-                                    "name": "nameChanged",
-                                    "title": "demo",
-                                    "original": "dem",
+                                    "title": "$title",
+                                    "original": "",
                                 },
                             ],
                         }
