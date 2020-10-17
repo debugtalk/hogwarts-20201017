@@ -9,8 +9,8 @@ class TestCaseMubuLogin(HttpRunner):
         .variables(
             **{
                 "host": "mubu.com",
-                "phone": "18613143458",
-                "password": "msFrwx$!kt3RTRq@Q*pV",
+                "phone": "18912343458",
+                "password": "123456",
             }
         )
         .base_url("https://$host")

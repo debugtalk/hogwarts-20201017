@@ -33,8 +33,8 @@ class TestCaseCreateDoc(HttpRunner):
             **{
                 "memberId": "${gen_member_id()}",
                 "host": "mubu.com",
-                "phone": "18613143458",
-                "password": "msFrwx$!kt3RTRq@Q*pV",
+                "phone": "18912343458",
+                "password": "123456",
                 "docTitle": "${gen_random_title()}",
             }
         )
