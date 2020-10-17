@@ -104,6 +104,7 @@ class TestCaseMubu(HttpRunner):
             RunRequest("/api/login/submit")
             .with_variables(**{
                 "remember": "true",
+                "timestamp": "${get_timestamp()}"
             })
             .post("/api/login/submit")
             .with_headers(
@@ -131,7 +132,12 @@ class TestCaseMubu(HttpRunner):
                 }
             )
             .with_data(
-                {"phone": "$phone", "password": "$password", "remember": "$remember",}
+                {
+                    "phone": "$phone",
+                    "password": "$password",
+                    "remember": "$remember",
+                    "token": "${gen_token($phone, $password, $timestamp)}"
+                }
             )
             .teardown_hook("${sleep(1)}")
             .extract()

@@ -1,4 +1,6 @@
 import time
+import hashlib
+
 
 from httprunner import __version__
 from httprunner.response import ResponseObject
@@ -6,6 +8,13 @@ from httprunner.response import ResponseObject
 
 def get_httprunner_version():
     return __version__
+
+
+def gen_token(phone, password, timestamp):
+    s = "".join([phone, password, str(timestamp)])
+    token = hashlib.md5(s.encode("utf-8")).hexdigest()
+    print(f"token: {token}")
+    return token
 
 
 def sum_two(m, n):
