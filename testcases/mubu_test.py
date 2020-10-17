@@ -129,6 +129,8 @@ class TestCaseMubu(HttpRunner):
                     "remember": "true",
                 }
             )
+            .extract()
+            .with_jmespath('cookies."Jwt-Token"', "JwtToken")
             .validate()
             .assert_equal("status_code", 200)
             .assert_equal("body.code", 0)
@@ -160,7 +162,7 @@ class TestCaseMubu(HttpRunner):
                     "_gat": "1",
                     "SLARDAR_WEB_ID": "51caeefc-7841-444f-913f-eb93ed088a92",
                     "Hm_lpvt_4426cbb0486a79ea049b4ad52d81b504": "1602915025",
-                    "Jwt-Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "Jwt-Token": "${JwtToken}",
                     "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
                 }
             )
@@ -193,7 +195,7 @@ class TestCaseMubu(HttpRunner):
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "_gat": "1",
                     "Hm_lpvt_4426cbb0486a79ea049b4ad52d81b504": "1602915025",
-                    "Jwt-Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "Jwt-Token": "${JwtToken}",
                     "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
                     "SLARDAR_WEB_ID": "8365d4b0-786b-4509-a35d-5102202f6f75",
                 }
@@ -231,7 +233,7 @@ class TestCaseMubu(HttpRunner):
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "_gat": "1",
                     "Hm_lpvt_4426cbb0486a79ea049b4ad52d81b504": "1602915025",
-                    "Jwt-Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "Jwt-Token": "${JwtToken}",
                     "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
                     "SLARDAR_WEB_ID": "8365d4b0-786b-4509-a35d-5102202f6f75",
                 }
@@ -268,7 +270,7 @@ class TestCaseMubu(HttpRunner):
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "_gat": "1",
                     "Hm_lpvt_4426cbb0486a79ea049b4ad52d81b504": "1602915025",
-                    "Jwt-Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "Jwt-Token": "${JwtToken}",
                     "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
                     "SLARDAR_WEB_ID": "8365d4b0-786b-4509-a35d-5102202f6f75",
                 }
@@ -305,7 +307,7 @@ class TestCaseMubu(HttpRunner):
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "_gat": "1",
                     "Hm_lpvt_4426cbb0486a79ea049b4ad52d81b504": "1602915025",
-                    "Jwt-Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "Jwt-Token": "${JwtToken}",
                     "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
                     "SLARDAR_WEB_ID": "8365d4b0-786b-4509-a35d-5102202f6f75",
                 }
@@ -343,7 +345,7 @@ class TestCaseMubu(HttpRunner):
                     "country": "US",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "_gat": "1",
-                    "Jwt-Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "Jwt-Token": "${JwtToken}",
                     "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
                     "SLARDAR_WEB_ID": "8365d4b0-786b-4509-a35d-5102202f6f75",
                     "mubu_inner": "1",
@@ -381,7 +383,7 @@ class TestCaseMubu(HttpRunner):
                     "country": "US",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "_gat": "1",
-                    "Jwt-Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "Jwt-Token": "${JwtToken}",
                     "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
                     "SLARDAR_WEB_ID": "8365d4b0-786b-4509-a35d-5102202f6f75",
                     "mubu_inner": "1",
@@ -460,7 +462,7 @@ class TestCaseMubu(HttpRunner):
                 **{
                     "content-length": "0",
                     "accept": "application/json, text/plain, */*",
-                    "jwt-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "jwt-token": "${JwtToken}",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "x-request-id": "3052befa-0cd3-4e21-8cb3-02c7f1fcb232",
@@ -485,7 +487,7 @@ class TestCaseMubu(HttpRunner):
                 **{
                     "content-length": "23",
                     "accept": "application/json, text/plain, */*",
-                    "jwt-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "jwt-token": "${JwtToken}",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "x-request-id": "75d37b87-96a7-4b11-9301-5bf4999fcb2b",
@@ -511,7 +513,7 @@ class TestCaseMubu(HttpRunner):
                 **{
                     "content-length": "29",
                     "accept": "application/json, text/plain, */*",
-                    "jwt-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "jwt-token": "${JwtToken}",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "x-request-id": "604975c0-5a7c-4b32-a641-a993dab0ab98",
@@ -560,7 +562,7 @@ class TestCaseMubu(HttpRunner):
                 **{
                     "content-length": "0",
                     "accept": "application/json, text/plain, */*",
-                    "jwt-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "jwt-token": "${JwtToken}",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "x-request-id": "1e2de244-914b-4c02-889c-28d8064c501c",
@@ -626,7 +628,7 @@ class TestCaseMubu(HttpRunner):
             .with_headers(
                 **{
                     "accept": "application/json, text/plain, */*",
-                    "jwt-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "jwt-token": "${JwtToken}",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "x-request-id": "cf2af2df-96ba-4875-bda1-98fbbd6274e3",
@@ -649,7 +651,7 @@ class TestCaseMubu(HttpRunner):
             .with_headers(
                 **{
                     "accept": "application/json, text/plain, */*",
-                    "jwt-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "jwt-token": "${JwtToken}",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "x-request-id": "215f81a3-a409-47b4-ab4d-fe46522bdea5",
@@ -697,7 +699,7 @@ class TestCaseMubu(HttpRunner):
             .with_headers(
                 **{
                     "accept": "application/json, text/plain, */*",
-                    "jwt-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "jwt-token": "${JwtToken}",
                     "request-id": "members:${memberId}:1602915036641",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
@@ -747,7 +749,7 @@ class TestCaseMubu(HttpRunner):
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "content-type": "application/json;charset=UTF-8",
                     "accept": "application/json, text/plain, */*",
-                    "jwt-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "jwt-token": "${JwtToken}",
                     "request-id": "MESSAGE:${userId}:${memberId}:6",
                     "x-request-id": "fddbac5a-e710-4a56-a971-df263c9d68fa",
                     "origin": "https://mubu.com",
@@ -810,7 +812,7 @@ class TestCaseMubu(HttpRunner):
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "content-type": "application/json;charset=UTF-8",
                     "accept": "application/json, text/plain, */*",
-                    "jwt-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "jwt-token": "${JwtToken}",
                     "request-id": "MESSAGE:${userId}:${memberId}:8",
                     "x-request-id": "632313f3-2a91-4975-8c38-c29626ee6efc",
                     "origin": "https://mubu.com",
@@ -877,7 +879,7 @@ class TestCaseMubu(HttpRunner):
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "content-type": "application/json;charset=UTF-8",
                     "accept": "application/json, text/plain, */*",
-                    "jwt-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "jwt-token": "${JwtToken}",
                     "request-id": "MESSAGE:${userId}:${memberId}:10",
                     "x-request-id": "c97cdfea-8933-469f-ac21-a63b8804261b",
                     "origin": "https://mubu.com",
@@ -946,7 +948,7 @@ class TestCaseMubu(HttpRunner):
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "content-type": "application/json;charset=UTF-8",
                     "accept": "application/json, text/plain, */*",
-                    "jwt-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "jwt-token": "${JwtToken}",
                     "request-id": "MESSAGE:${userId}:${memberId}:12",
                     "x-request-id": "98680e5d-5e81-44d2-9aae-1f15bd81b714",
                     "origin": "https://mubu.com",
@@ -1013,7 +1015,7 @@ class TestCaseMubu(HttpRunner):
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "content-type": "application/json;charset=UTF-8",
                     "accept": "application/json, text/plain, */*",
-                    "jwt-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "jwt-token": "${JwtToken}",
                     "request-id": "MESSAGE:${userId}:${memberId}:13",
                     "x-request-id": "5064ff01-f7fe-486e-8180-bc343640a299",
                     "origin": "https://mubu.com",
@@ -1082,7 +1084,7 @@ class TestCaseMubu(HttpRunner):
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "content-type": "application/json;charset=UTF-8",
                     "accept": "application/json, text/plain, */*",
-                    "jwt-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "jwt-token": "${JwtToken}",
                     "request-id": "MESSAGE:${userId}:${memberId}:15",
                     "x-request-id": "3d7ebeef-b899-44d2-81a0-125166b4e0e8",
                     "origin": "https://mubu.com",
@@ -1168,7 +1170,7 @@ class TestCaseMubu(HttpRunner):
                 **{
                     "content-length": "42",
                     "accept": "application/json, text/plain, */*",
-                    "jwt-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "jwt-token": "${JwtToken}",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "x-request-id": "1ebe04c1-252c-4219-9cfb-5ab7420d675e",
@@ -1198,7 +1200,7 @@ class TestCaseMubu(HttpRunner):
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "content-type": "application/json;charset=UTF-8",
                     "accept": "application/json, text/plain, */*",
-                    "jwt-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "jwt-token": "${JwtToken}",
                     "request-id": "MESSAGE:${userId}:${memberId}:18",
                     "x-request-id": "f916ac54-2af5-41c1-a9ce-f5b1db6863f7",
                     "origin": "https://mubu.com",
@@ -1254,7 +1256,7 @@ class TestCaseMubu(HttpRunner):
                     "country": "US",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "_gat": "1",
-                    "Jwt-Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "Jwt-Token": "${JwtToken}",
                     "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
                     "mubu_inner": "1",
                     "SLARDAR_WEB_ID": "a87ef0b2-2e21-455f-ae21-f4b4e8bc43b2",
@@ -1289,7 +1291,7 @@ class TestCaseMubu(HttpRunner):
                     "country": "US",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "_gat": "1",
-                    "Jwt-Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "Jwt-Token": "${JwtToken}",
                     "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
                     "mubu_inner": "1",
                     "SLARDAR_WEB_ID": "a87ef0b2-2e21-455f-ae21-f4b4e8bc43b2",
@@ -1328,7 +1330,7 @@ class TestCaseMubu(HttpRunner):
                     "country": "US",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "_gat": "1",
-                    "Jwt-Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "Jwt-Token": "${JwtToken}",
                     "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
                     "mubu_inner": "1",
                     "SLARDAR_WEB_ID": "a87ef0b2-2e21-455f-ae21-f4b4e8bc43b2",
@@ -1366,7 +1368,7 @@ class TestCaseMubu(HttpRunner):
                     "country": "US",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "_gat": "1",
-                    "Jwt-Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhcHAiOiJtdWJ1Iiwic3ViIjoiMTQ0OTE2NCIsImV4cCI6MTYwNTUwNzAyNywiaWF0IjoxNjAyOTE1MDI3fQ.Bim8icKC_qJZvXEJXBcHRD55_J3JsWvbW1e37dNHQOGryIuiaPBeG_cewSlli5LHAEFH9-3Aog9k-o8ZqkeIEQ",
+                    "Jwt-Token": "${JwtToken}",
                     "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
                     "mubu_inner": "1",
                     "SLARDAR_WEB_ID": "a87ef0b2-2e21-455f-ae21-f4b4e8bc43b2",
