@@ -57,7 +57,6 @@ class TestCaseMubu(HttpRunner):
                     "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "SLARDAR_WEB_ID": "4c3231c1-82f0-4ca9-aa6f-ba8a44743ec6",
                 }
             )
@@ -86,10 +85,9 @@ class TestCaseMubu(HttpRunner):
                     "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "_gat": "1",
                     "SLARDAR_WEB_ID": "6ef02f1c-9246-4e86-a356-cc448f3ebbb2",
-                    }
+                }
             )
             .validate()
             .assert_equal("status_code", 200)
@@ -118,7 +116,6 @@ class TestCaseMubu(HttpRunner):
                     "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "SLARDAR_WEB_ID": "51caeefc-7841-444f-913f-eb93ed088a92",
                 }
             )
@@ -158,7 +155,6 @@ class TestCaseMubu(HttpRunner):
                     "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "_gat": "1",
                     "SLARDAR_WEB_ID": "51caeefc-7841-444f-913f-eb93ed088a92",
                     "Hm_lpvt_4426cbb0486a79ea049b4ad52d81b504": "1602915025",
@@ -192,7 +188,6 @@ class TestCaseMubu(HttpRunner):
                     "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "_gat": "1",
                     "Hm_lpvt_4426cbb0486a79ea049b4ad52d81b504": "1602915025",
                     "Jwt-Token": "${JwtToken}",
@@ -230,7 +225,6 @@ class TestCaseMubu(HttpRunner):
                     "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "_gat": "1",
                     "Hm_lpvt_4426cbb0486a79ea049b4ad52d81b504": "1602915025",
                     "Jwt-Token": "${JwtToken}",
@@ -267,7 +261,6 @@ class TestCaseMubu(HttpRunner):
                     "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "_gat": "1",
                     "Hm_lpvt_4426cbb0486a79ea049b4ad52d81b504": "1602915025",
                     "Jwt-Token": "${JwtToken}",
@@ -304,7 +297,6 @@ class TestCaseMubu(HttpRunner):
                     "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "_gat": "1",
                     "Hm_lpvt_4426cbb0486a79ea049b4ad52d81b504": "1602915025",
                     "Jwt-Token": "${JwtToken}",
@@ -343,13 +335,12 @@ class TestCaseMubu(HttpRunner):
                     "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "_gat": "1",
                     "Jwt-Token": "${JwtToken}",
                     "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
                     "SLARDAR_WEB_ID": "8365d4b0-786b-4509-a35d-5102202f6f75",
                     "mubu_inner": "1",
-                    }
+                }
             )
             .with_data({"folderId": "0", "type": "0"})
             .extract()
@@ -381,13 +372,12 @@ class TestCaseMubu(HttpRunner):
                     "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "_gat": "1",
                     "Jwt-Token": "${JwtToken}",
                     "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
                     "SLARDAR_WEB_ID": "8365d4b0-786b-4509-a35d-5102202f6f75",
                     "mubu_inner": "1",
-                    }
+                }
             )
             .validate()
             .assert_equal("status_code", 200)
@@ -464,7 +454,6 @@ class TestCaseMubu(HttpRunner):
                     "accept": "application/json, text/plain, */*",
                     "jwt-token": "${JwtToken}",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "x-request-id": "3052befa-0cd3-4e21-8cb3-02c7f1fcb232",
                     "origin": "https://mubu.com",
                     "sec-fetch-site": "same-site",
@@ -489,7 +478,6 @@ class TestCaseMubu(HttpRunner):
                     "accept": "application/json, text/plain, */*",
                     "jwt-token": "${JwtToken}",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "x-request-id": "75d37b87-96a7-4b11-9301-5bf4999fcb2b",
                     "content-type": "application/json;charset=UTF-8",
                     "origin": "https://mubu.com",
@@ -515,7 +503,6 @@ class TestCaseMubu(HttpRunner):
                     "accept": "application/json, text/plain, */*",
                     "jwt-token": "${JwtToken}",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "x-request-id": "604975c0-5a7c-4b32-a641-a993dab0ab98",
                     "content-type": "application/json;charset=UTF-8",
                     "origin": "https://mubu.com",
@@ -564,7 +551,6 @@ class TestCaseMubu(HttpRunner):
                     "accept": "application/json, text/plain, */*",
                     "jwt-token": "${JwtToken}",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "x-request-id": "1e2de244-914b-4c02-889c-28d8064c501c",
                     "origin": "https://mubu.com",
                     "sec-fetch-site": "same-site",
@@ -630,7 +616,6 @@ class TestCaseMubu(HttpRunner):
                     "accept": "application/json, text/plain, */*",
                     "jwt-token": "${JwtToken}",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "x-request-id": "cf2af2df-96ba-4875-bda1-98fbbd6274e3",
                     "origin": "https://mubu.com",
                     "sec-fetch-site": "same-site",
@@ -653,7 +638,6 @@ class TestCaseMubu(HttpRunner):
                     "accept": "application/json, text/plain, */*",
                     "jwt-token": "${JwtToken}",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "x-request-id": "215f81a3-a409-47b4-ab4d-fe46522bdea5",
                     "origin": "https://mubu.com",
                     "sec-fetch-site": "same-site",
@@ -693,16 +677,13 @@ class TestCaseMubu(HttpRunner):
         Step(
             RunRequest("/v3/api/colla/members")
             .get("https://api2.mubu.com/v3/api/colla/members")
-            .with_params(
-                **{"memberId": "${memberId}", "documentId": "${docID}"}
-            )
+            .with_params(**{"memberId": "${memberId}", "documentId": "${docID}"})
             .with_headers(
                 **{
                     "accept": "application/json, text/plain, */*",
                     "jwt-token": "${JwtToken}",
                     "request-id": "members:${memberId}:1602915036641",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "x-request-id": "8dd0d063-e99f-46c5-8541-45c7ed93675a",
                     "origin": "https://mubu.com",
                     "sec-fetch-site": "same-site",
@@ -746,7 +727,6 @@ class TestCaseMubu(HttpRunner):
                     "content-length": "513",
                     "member-id": "${memberId}",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "content-type": "application/json;charset=UTF-8",
                     "accept": "application/json, text/plain, */*",
                     "jwt-token": "${JwtToken}",
@@ -809,7 +789,6 @@ class TestCaseMubu(HttpRunner):
                     "content-length": "458",
                     "member-id": "${memberId}",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "content-type": "application/json;charset=UTF-8",
                     "accept": "application/json, text/plain, */*",
                     "jwt-token": "${JwtToken}",
@@ -876,7 +855,6 @@ class TestCaseMubu(HttpRunner):
                     "content-length": "505",
                     "member-id": "${memberId}",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "content-type": "application/json;charset=UTF-8",
                     "accept": "application/json, text/plain, */*",
                     "jwt-token": "${JwtToken}",
@@ -945,7 +923,6 @@ class TestCaseMubu(HttpRunner):
                     "content-length": "460",
                     "member-id": "${memberId}",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "content-type": "application/json;charset=UTF-8",
                     "accept": "application/json, text/plain, */*",
                     "jwt-token": "${JwtToken}",
@@ -1012,7 +989,6 @@ class TestCaseMubu(HttpRunner):
                     "content-length": "503",
                     "member-id": "${memberId}",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "content-type": "application/json;charset=UTF-8",
                     "accept": "application/json, text/plain, */*",
                     "jwt-token": "${JwtToken}",
@@ -1081,7 +1057,6 @@ class TestCaseMubu(HttpRunner):
                     "content-length": "519",
                     "member-id": "${memberId}",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "content-type": "application/json;charset=UTF-8",
                     "accept": "application/json, text/plain, */*",
                     "jwt-token": "${JwtToken}",
@@ -1172,7 +1147,6 @@ class TestCaseMubu(HttpRunner):
                     "accept": "application/json, text/plain, */*",
                     "jwt-token": "${JwtToken}",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "x-request-id": "1ebe04c1-252c-4219-9cfb-5ab7420d675e",
                     "content-type": "application/json;charset=UTF-8",
                     "origin": "https://mubu.com",
@@ -1197,7 +1171,6 @@ class TestCaseMubu(HttpRunner):
                     "content-length": "227",
                     "member-id": "${memberId}",
                     "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "content-type": "application/json;charset=UTF-8",
                     "accept": "application/json, text/plain, */*",
                     "jwt-token": "${JwtToken}",
@@ -1254,7 +1227,6 @@ class TestCaseMubu(HttpRunner):
                     "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "_gat": "1",
                     "Jwt-Token": "${JwtToken}",
                     "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
@@ -1289,7 +1261,6 @@ class TestCaseMubu(HttpRunner):
                     "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "_gat": "1",
                     "Jwt-Token": "${JwtToken}",
                     "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
@@ -1328,7 +1299,6 @@ class TestCaseMubu(HttpRunner):
                     "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "_gat": "1",
                     "Jwt-Token": "${JwtToken}",
                     "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
@@ -1366,7 +1336,6 @@ class TestCaseMubu(HttpRunner):
                     "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
-                    "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
                     "_gat": "1",
                     "Jwt-Token": "${JwtToken}",
                     "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
