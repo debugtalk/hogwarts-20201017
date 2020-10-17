@@ -53,7 +53,6 @@ class TestCaseMubu(HttpRunner):
             .with_cookies(
                 **{
                     "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
-                    "csrf_token": "70064e63-0af5-4d24-82ef-696e1a1dd3bf",
                     "SESSION": "d00faaf8-6519-4732-b0ab-a53da4989ea7",
                     "language": "en-US",
                     "country": "US",
@@ -90,7 +89,6 @@ class TestCaseMubu(HttpRunner):
             .with_cookies(
                 **{
                     "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
-                    "csrf_token": "70064e63-0af5-4d24-82ef-696e1a1dd3bf",
                     "SESSION": "d00faaf8-6519-4732-b0ab-a53da4989ea7",
                     "language": "en-US",
                     "country": "US",
@@ -131,7 +129,6 @@ class TestCaseMubu(HttpRunner):
             .with_cookies(
                 **{
                     "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
-                    "csrf_token": "70064e63-0af5-4d24-82ef-696e1a1dd3bf",
                     "SESSION": "d00faaf8-6519-4732-b0ab-a53da4989ea7",
                     "language": "en-US",
                     "country": "US",
@@ -179,7 +176,6 @@ class TestCaseMubu(HttpRunner):
             .with_cookies(
                 **{
                     "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
-                    "csrf_token": "70064e63-0af5-4d24-82ef-696e1a1dd3bf",
                     "SESSION": "d00faaf8-6519-4732-b0ab-a53da4989ea7",
                     "language": "en-US",
                     "country": "US",
@@ -221,7 +217,6 @@ class TestCaseMubu(HttpRunner):
             .with_cookies(
                 **{
                     "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
-                    "csrf_token": "70064e63-0af5-4d24-82ef-696e1a1dd3bf",
                     "SESSION": "d00faaf8-6519-4732-b0ab-a53da4989ea7",
                     "language": "en-US",
                     "country": "US",
@@ -267,7 +262,6 @@ class TestCaseMubu(HttpRunner):
             .with_cookies(
                 **{
                     "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
-                    "csrf_token": "70064e63-0af5-4d24-82ef-696e1a1dd3bf",
                     "SESSION": "d00faaf8-6519-4732-b0ab-a53da4989ea7",
                     "language": "en-US",
                     "country": "US",
@@ -312,7 +306,6 @@ class TestCaseMubu(HttpRunner):
             .with_cookies(
                 **{
                     "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
-                    "csrf_token": "70064e63-0af5-4d24-82ef-696e1a1dd3bf",
                     "SESSION": "d00faaf8-6519-4732-b0ab-a53da4989ea7",
                     "language": "en-US",
                     "country": "US",
@@ -357,7 +350,6 @@ class TestCaseMubu(HttpRunner):
             .with_cookies(
                 **{
                     "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
-                    "csrf_token": "70064e63-0af5-4d24-82ef-696e1a1dd3bf",
                     "SESSION": "d00faaf8-6519-4732-b0ab-a53da4989ea7",
                     "language": "en-US",
                     "country": "US",
@@ -404,7 +396,6 @@ class TestCaseMubu(HttpRunner):
             .with_cookies(
                 **{
                     "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
-                    "csrf_token": "70064e63-0af5-4d24-82ef-696e1a1dd3bf",
                     "SESSION": "d00faaf8-6519-4732-b0ab-a53da4989ea7",
                     "language": "en-US",
                     "country": "US",
@@ -452,7 +443,6 @@ class TestCaseMubu(HttpRunner):
             .with_cookies(
                 **{
                     "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
-                    "csrf_token": "70064e63-0af5-4d24-82ef-696e1a1dd3bf",
                     "SESSION": "d00faaf8-6519-4732-b0ab-a53da4989ea7",
                     "language": "en-US",
                     "country": "US",
@@ -1335,7 +1325,6 @@ class TestCaseMubu(HttpRunner):
             .with_cookies(
                 **{
                     "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
-                    "csrf_token": "70064e63-0af5-4d24-82ef-696e1a1dd3bf",
                     "SESSION": "d00faaf8-6519-4732-b0ab-a53da4989ea7",
                     "language": "en-US",
                     "country": "US",
@@ -1380,7 +1369,6 @@ class TestCaseMubu(HttpRunner):
             .with_cookies(
                 **{
                     "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
-                    "csrf_token": "70064e63-0af5-4d24-82ef-696e1a1dd3bf",
                     "SESSION": "d00faaf8-6519-4732-b0ab-a53da4989ea7",
                     "language": "en-US",
                     "country": "US",
@@ -1429,7 +1417,6 @@ class TestCaseMubu(HttpRunner):
             .with_cookies(
                 **{
                     "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
-                    "csrf_token": "70064e63-0af5-4d24-82ef-696e1a1dd3bf",
                     "SESSION": "d00faaf8-6519-4732-b0ab-a53da4989ea7",
                     "language": "en-US",
                     "country": "US",
@@ -1477,7 +1464,6 @@ class TestCaseMubu(HttpRunner):
             .with_cookies(
                 **{
                     "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
-                    "csrf_token": "70064e63-0af5-4d24-82ef-696e1a1dd3bf",
                     "SESSION": "d00faaf8-6519-4732-b0ab-a53da4989ea7",
                     "language": "en-US",
                     "country": "US",
