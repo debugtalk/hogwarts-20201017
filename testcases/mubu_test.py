@@ -21,11 +21,12 @@ class TestCaseMubu(HttpRunner):
                 "host": "mubu.com",
                 "phone": "18613143458",
                 "password": "msFrwx$!kt3RTRq@Q*pV",
-                "title": "${gen_random_title()}",
+                "docTitle": "${gen_random_title()}",
             }
         )
         .base_url("https://$host")
         .verify(False)
+        .export("docTitle", "docID")
     )
 
     teststeps = [
@@ -479,7 +480,7 @@ class TestCaseMubu(HttpRunner):
                             "content": [
                                 {
                                     "name": "nameChanged",
-                                    "title": "$title",
+                                    "title": "$docTitle",
                                     "original": "",
                                 },
                             ],
