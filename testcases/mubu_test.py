@@ -246,6 +246,7 @@ class TestCaseMubu(HttpRunner):
             .assert_equal("status_code", 200)
             .assert_equal("body.code", 0)
             .assert_equal("body.msg", None)
+            .assert_length_greater_than("body.data.folders", 5)
         ),
         Step(
             RunRequest("/api/message/get_message_unread")
