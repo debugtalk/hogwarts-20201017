@@ -4,6 +4,9 @@
 import sys
 from pathlib import Path
 
+import pytest
+from httprunner import Parameters
+
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from httprunner import HttpRunner, Config, Step, RunRequest, RunTestCase
@@ -12,6 +15,12 @@ from testcases.login_test import TestCaseMubuLogin as MubuLogin
 
 
 class TestCaseCreateDoc(HttpRunner):
+    @pytest.mark.parametrize(
+        "param",
+        Parameters({"docTitle": ["demo-1", "demo-2", "demo-3"]})
+    )
+    def test_start(self, param):
+        super().test_start(param)
 
     config = (
         Config("testcase description")
