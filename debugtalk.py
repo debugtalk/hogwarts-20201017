@@ -38,3 +38,7 @@ def get_folders_num(response: ResponseObject):
 
 def gen_random_title():
     return f"demo-{random.randint(1, 9999999)}"
+
+
+def gen_doc_titles(num):
+    return [gen_random_title() for _ in range(num)]

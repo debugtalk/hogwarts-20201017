@@ -17,7 +17,7 @@ from testcases.login_test import TestCaseMubuLogin as MubuLogin
 class TestCaseCreateDoc(HttpRunner):
     @pytest.mark.parametrize(
         "param",
-        Parameters({"docTitle": ["demo-1", "demo-2", "demo-3"]})
+        Parameters({"docTitle": "${gen_doc_titles(3)}"})
     )
     def test_start(self, param):
         super().test_start(param)
