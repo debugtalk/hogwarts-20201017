@@ -133,6 +133,7 @@ class TestCaseMubu(HttpRunner):
             .with_data(
                 {"phone": "$phone", "password": "$password", "remember": "$remember",}
             )
+            .teardown_hook("${sleep(1)}")
             .extract()
             .with_jmespath('cookies."Jwt-Token"', "JwtToken")
             .with_jmespath("cookies.user_persistence", "user_persistence")
