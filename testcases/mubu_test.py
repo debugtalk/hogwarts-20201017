@@ -243,6 +243,7 @@ class TestCaseMubu(HttpRunner):
                 }
             )
             .with_data({"folderId": "0", "sort": "name", "keywords": "", "source": ""})
+            .teardown_hook("${get_folders_num($response)}", "folders_num")
             .validate()
             .assert_equal("status_code", 200)
             .assert_equal("body.code", 0)
