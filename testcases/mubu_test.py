@@ -128,6 +128,7 @@ class TestCaseMubu(HttpRunner):
             )
             .extract()
             .with_jmespath('cookies."Jwt-Token"', "JwtToken")
+            .with_jmespath("cookies.user_persistence", "user_persistence")
             .validate()
             .assert_equal("status_code", 200)
             .assert_equal("body.code", 0)
@@ -159,7 +160,7 @@ class TestCaseMubu(HttpRunner):
                     "SLARDAR_WEB_ID": "51caeefc-7841-444f-913f-eb93ed088a92",
                     "Hm_lpvt_4426cbb0486a79ea049b4ad52d81b504": "1602915025",
                     "Jwt-Token": "${JwtToken}",
-                    "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
+                    "user_persistence": "${user_persistence}",
                 }
             )
             .validate()
@@ -191,7 +192,7 @@ class TestCaseMubu(HttpRunner):
                     "_gat": "1",
                     "Hm_lpvt_4426cbb0486a79ea049b4ad52d81b504": "1602915025",
                     "Jwt-Token": "${JwtToken}",
-                    "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
+                    "user_persistence": "${user_persistence}",
                     "SLARDAR_WEB_ID": "8365d4b0-786b-4509-a35d-5102202f6f75",
                 }
             )
@@ -228,7 +229,7 @@ class TestCaseMubu(HttpRunner):
                     "_gat": "1",
                     "Hm_lpvt_4426cbb0486a79ea049b4ad52d81b504": "1602915025",
                     "Jwt-Token": "${JwtToken}",
-                    "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
+                    "user_persistence": "${user_persistence}",
                     "SLARDAR_WEB_ID": "8365d4b0-786b-4509-a35d-5102202f6f75",
                 }
             )
@@ -264,7 +265,7 @@ class TestCaseMubu(HttpRunner):
                     "_gat": "1",
                     "Hm_lpvt_4426cbb0486a79ea049b4ad52d81b504": "1602915025",
                     "Jwt-Token": "${JwtToken}",
-                    "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
+                    "user_persistence": "${user_persistence}",
                     "SLARDAR_WEB_ID": "8365d4b0-786b-4509-a35d-5102202f6f75",
                 }
             )
@@ -300,7 +301,7 @@ class TestCaseMubu(HttpRunner):
                     "_gat": "1",
                     "Hm_lpvt_4426cbb0486a79ea049b4ad52d81b504": "1602915025",
                     "Jwt-Token": "${JwtToken}",
-                    "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
+                    "user_persistence": "${user_persistence}",
                     "SLARDAR_WEB_ID": "8365d4b0-786b-4509-a35d-5102202f6f75",
                 }
             )
@@ -337,7 +338,7 @@ class TestCaseMubu(HttpRunner):
                     "country": "US",
                     "_gat": "1",
                     "Jwt-Token": "${JwtToken}",
-                    "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
+                    "user_persistence": "${user_persistence}",
                     "SLARDAR_WEB_ID": "8365d4b0-786b-4509-a35d-5102202f6f75",
                     "mubu_inner": "1",
                 }
@@ -374,7 +375,7 @@ class TestCaseMubu(HttpRunner):
                     "country": "US",
                     "_gat": "1",
                     "Jwt-Token": "${JwtToken}",
-                    "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
+                    "user_persistence": "${user_persistence}",
                     "SLARDAR_WEB_ID": "8365d4b0-786b-4509-a35d-5102202f6f75",
                     "mubu_inner": "1",
                 }
@@ -1229,7 +1230,7 @@ class TestCaseMubu(HttpRunner):
                     "country": "US",
                     "_gat": "1",
                     "Jwt-Token": "${JwtToken}",
-                    "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
+                    "user_persistence": "${user_persistence}",
                     "mubu_inner": "1",
                     "SLARDAR_WEB_ID": "a87ef0b2-2e21-455f-ae21-f4b4e8bc43b2",
                     "_gat_UA-77727571-3": "1",
@@ -1263,7 +1264,7 @@ class TestCaseMubu(HttpRunner):
                     "country": "US",
                     "_gat": "1",
                     "Jwt-Token": "${JwtToken}",
-                    "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
+                    "user_persistence": "${user_persistence}",
                     "mubu_inner": "1",
                     "SLARDAR_WEB_ID": "a87ef0b2-2e21-455f-ae21-f4b4e8bc43b2",
                     "_gat_UA-77727571-3": "1",
@@ -1301,7 +1302,7 @@ class TestCaseMubu(HttpRunner):
                     "country": "US",
                     "_gat": "1",
                     "Jwt-Token": "${JwtToken}",
-                    "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
+                    "user_persistence": "${user_persistence}",
                     "mubu_inner": "1",
                     "SLARDAR_WEB_ID": "a87ef0b2-2e21-455f-ae21-f4b4e8bc43b2",
                     "_gat_UA-77727571-3": "1",
@@ -1338,7 +1339,7 @@ class TestCaseMubu(HttpRunner):
                     "country": "US",
                     "_gat": "1",
                     "Jwt-Token": "${JwtToken}",
-                    "user_persistence": "8c6f1a65-28e6-4af8-8179-b52405ce0a2e",
+                    "user_persistence": "${user_persistence}",
                     "mubu_inner": "1",
                     "SLARDAR_WEB_ID": "a87ef0b2-2e21-455f-ae21-f4b4e8bc43b2",
                     "_gat_UA-77727571-3": "1",
