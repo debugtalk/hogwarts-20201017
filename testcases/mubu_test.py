@@ -9,7 +9,14 @@ class TestCaseMubu(HttpRunner):
 
     config = (
         Config("testcase description")
-        .variables(**{"memberId": "2753800615995680", "host": "mubu.com"})
+        .variables(
+            **{
+                "memberId": "2753800615995680",
+                "host": "mubu.com",
+                "phone": "18613143458",
+                "password": "msFrwx$!kt3RTRq@Q*pV",
+            }
+        )
         .base_url("https://$host")
         .verify(False)
     )
@@ -121,11 +128,7 @@ class TestCaseMubu(HttpRunner):
                 }
             )
             .with_data(
-                {
-                    "phone": "18613143458",
-                    "password": "msFrwx$!kt3RTRq@Q*pV",
-                    "remember": "true",
-                }
+                {"phone": "$phone", "password": "$password", "remember": "true",}
             )
             .extract()
             .with_jmespath('cookies."Jwt-Token"', "JwtToken")
