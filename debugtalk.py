@@ -10,6 +10,10 @@ def get_httprunner_version():
     return __version__
 
 
+def gen_member_id():
+    return "2753800615995680"
+
+
 def gen_token(phone, password, timestamp):
     s = "".join([phone, password, str(timestamp)])
     token = hashlib.md5(s.encode("utf-8")).hexdigest()

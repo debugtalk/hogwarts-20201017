@@ -11,7 +11,7 @@ class TestCaseMubu(HttpRunner):
         Config("testcase description")
         .variables(
             **{
-                "memberId": "2753800615995680",
+                "memberId": "${gen_member_id()}",
                 "host": "mubu.com",
                 "phone": "18613143458",
                 "password": "msFrwx$!kt3RTRq@Q*pV",
