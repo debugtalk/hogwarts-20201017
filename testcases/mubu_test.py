@@ -30,6 +30,8 @@ class TestCaseMubu(HttpRunner):
                     "accept-language": "en-US,en;q=0.9",
                 }
             )
+            .extract()
+            .with_jmespath("cookies.data_unique_id", "data_unique_id")
             .validate()
             .assert_equal("status_code", 200)
         ),
@@ -52,7 +54,7 @@ class TestCaseMubu(HttpRunner):
             )
             .with_cookies(
                 **{
-                    "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
+                    "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
@@ -87,7 +89,7 @@ class TestCaseMubu(HttpRunner):
             )
             .with_cookies(
                 **{
-                    "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
+                    "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
@@ -126,7 +128,7 @@ class TestCaseMubu(HttpRunner):
             )
             .with_cookies(
                 **{
-                    "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
+                    "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
@@ -172,7 +174,7 @@ class TestCaseMubu(HttpRunner):
             )
             .with_cookies(
                 **{
-                    "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
+                    "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
@@ -212,7 +214,7 @@ class TestCaseMubu(HttpRunner):
             )
             .with_cookies(
                 **{
-                    "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
+                    "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
@@ -256,7 +258,7 @@ class TestCaseMubu(HttpRunner):
             )
             .with_cookies(
                 **{
-                    "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
+                    "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
@@ -299,7 +301,7 @@ class TestCaseMubu(HttpRunner):
             )
             .with_cookies(
                 **{
-                    "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
+                    "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
@@ -342,7 +344,7 @@ class TestCaseMubu(HttpRunner):
             )
             .with_cookies(
                 **{
-                    "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
+                    "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
@@ -387,7 +389,7 @@ class TestCaseMubu(HttpRunner):
             )
             .with_cookies(
                 **{
-                    "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
+                    "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
@@ -433,7 +435,7 @@ class TestCaseMubu(HttpRunner):
             )
             .with_cookies(
                 **{
-                    "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
+                    "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
@@ -1314,7 +1316,7 @@ class TestCaseMubu(HttpRunner):
             )
             .with_cookies(
                 **{
-                    "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
+                    "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
@@ -1357,7 +1359,7 @@ class TestCaseMubu(HttpRunner):
             )
             .with_cookies(
                 **{
-                    "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
+                    "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
@@ -1404,7 +1406,7 @@ class TestCaseMubu(HttpRunner):
             )
             .with_cookies(
                 **{
-                    "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
+                    "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
@@ -1450,7 +1452,7 @@ class TestCaseMubu(HttpRunner):
             )
             .with_cookies(
                 **{
-                    "data_unique_id": "99020205-895a-4048-809b-38d0879ddb2b",
+                    "data_unique_id": "${data_unique_id}",
                     "language": "en-US",
                     "country": "US",
                     "data-unique-id": "6e7b98f0-103f-11eb-adae-4359cf6721a0",
