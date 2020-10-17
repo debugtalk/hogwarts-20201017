@@ -102,6 +102,9 @@ class TestCaseMubu(HttpRunner):
         ),
         Step(
             RunRequest("/api/login/submit")
+            .with_variables(**{
+                "remember": "true",
+            })
             .post("/api/login/submit")
             .with_headers(
                 **{
@@ -128,7 +131,7 @@ class TestCaseMubu(HttpRunner):
                 }
             )
             .with_data(
-                {"phone": "$phone", "password": "$password", "remember": "true",}
+                {"phone": "$phone", "password": "$password", "remember": "$remember",}
             )
             .extract()
             .with_jmespath('cookies."Jwt-Token"', "JwtToken")
